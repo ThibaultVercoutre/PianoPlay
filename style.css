@@ -1,0 +1,84 @@
+body{
+    background-color: rgb(170, 165, 142);
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    height: 100vh;
+}
+
+div#menu{
+    background-color: rgb(136, 132, 113);;
+    height: 10%;
+}
+
+div#piano{
+    height: 90%;
+}
+
+/*===========================================================================*/
+/*===================================== PIANO ===============================*/
+
+div#visuel{
+    background-color: rgb(28, 23, 3);
+    height: 80%;
+}
+
+div#clavier{
+    background-color: black;
+    height: 20%;
+    position: relative;
+}
+
+/*===========================================================================*/
+/*===================================== NOTES ===============================*/
+
+/* noires */
+
+#notes-noires{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#notes-noires div{
+    margin: 1px;
+}
+
+#notes-noires div:not(.empty, .limit) {
+    z-index: 1;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 0px 0px 5px 5px;
+    flex: 1;
+    height: 50%;
+}
+#notes-noires div.empty {
+    flex: 1;
+}
+
+#notes-noires div.limit {
+    flex: 0.5;
+}
+
+/* blanches */
+
+#notes-blanches{
+    z-index: 0;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#notes-blanches div{
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 0px 0px 5px 5px;
+    flex: 1;
+    height: 95%;
+}
+
+#notes-blanches div:hover{
+    background-color: grey;
+}
